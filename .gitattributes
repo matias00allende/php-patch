@@ -1,0 +1,6 @@
+# Los scripts y plantillas deben conservar finales de linea LF (un CRLF rompe bash y las unidades systemd)
+* text=auto eol=lf
+*.sh text eol=lf
+*.tpl text eol=lf
+*.conf text eol=lf
+*.tar.gz binary

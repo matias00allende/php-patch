@@ -1,0 +1,24 @@
+# Hashes SHA256 de las fuentes (formato sha256sum: "<hash>  <archivo>").
+# Solo se registran hashes contrastados con una fuente externa al archivo descargado (el proyecto o, donde no publica hash ni firma, una distribucion independiente; ver el metodo de cada linea). Un hash inventado es peor que ninguno.
+# Fuentes consultadas el 2026-10-23 y 2026-10-24:
+#   PHP: sha256 publicado por php.net (https://www.php.net/releases/index.php?json&version=8.2, 8.3, 8.4 y 8.5; 8.2.35 y 8.5.12 contrastadas el 2026-10-24).
+#   libxml2: archivo libxml2-2.9.14.sha256sum publicado en download.gnome.org/sources/libxml2/2.9/.
+#   OpenSSL: digest sha256 del asset en la release oficial de GitHub (api.github.com/repos/openssl/openssl/releases/tags/openssl-3.5.9).
+#   zlib 1.3.1, ICU 64.2, curl 8.23.0: firma GPG del archivo verificada con la clave del mantenedor (obtenida del sitio o repositorio del proyecto, sin cruzarla con un keyserver).
+#   SQLite 3.54.1: el SHA3-256 publicado por sqlite.org coincide con el archivo sqlite-autoconf-3540100.tar.gz. Se usa ese tarball y no el de etiqueta de GitHub.
+#   unixODBC 2.3.12 (confianza MEDIA): el proyecto no publica hash ni firma; el SHA256 y el tamano coinciden con el distinfo de FreeBSD ports.
+#   libzip 1.7.3 (confianza MEDIA): el proyecto no publica hash ni firma; coincide entre la release de GitHub y libzip_1.7.3.orig.tar.xz del .dsc de Debian.
+# Para unixODBC y libzip la autenticidad se apoya en una distribucion independiente, no en el proyecto. Detalle en references/02.
+# Si agregas una fuente sin hash contrastado, usa ALLOW_UNPINNED=1: queda SOURCES-NOT-AUTHENTICATED.txt y los scripts de instalacion se niegan sin una excepcion aprobada.
+dd54693aa334c5c4d72e9aee96b082c2473750a18a6c1d105789c93a3b1692fd  php-8.3.36.tar.xz
+dcf93923b0e38e0d5252b25b796520b5a47761a08b3488b6d0b5d1115764d3f0  php-8.4.27.tar.xz
+60d74a257d1ccec0475e749cba2f21559e48139efba6ff28224357c7c798dfee  libxml2-2.9.14.tar.xz
+603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a  openssl-3.5.9.tar.gz
+5737b98601fe5ab1b8c5db0c82ed3158acb9283ed3081ffe2faffb9ac81455e6  php-8.2.35.tar.xz
+08bc2eba2a588654ade1357174aa646b761556c862dda0678345ee29ed481209  php-8.5.12.tar.xz
+9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23  zlib-1.3.1.tar.gz
+627d5d8478e6d96fc8c90fed4851239079a561a6a8b9e48b0892f24e82d31d6c  icu4c-64_2-src.tgz
+8dadd7d2536a314f982ad05a651b713f426bf7d02cc2c76cffb9796f2218e6c5  curl-8.23.0.tar.xz
+926ef8d3eab93fbf6e06011901273eec076b25594a4e1cdadd50c987f4f6d64e  sqlite-autoconf-3540100.tar.gz
+f210501445ce21bf607ba51ef8c125e10e22dffdffec377646462df5f01915ec  unixODBC-2.3.12.tar.gz
+a60473ffdb7b4260c08bfa19c2ccea0438edac11193c3afbbb1f17fbcf6c6132  libzip-1.7.3.tar.xz

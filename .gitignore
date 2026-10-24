@@ -1,0 +1,10 @@
+# Salidas locales que nunca deben publicarse
+*.tar.gz
+*.tgz
+*.log
+*.tsv
+SOURCES-NOT-AUTHENTICATED*.txt
+.env
+*.pem
+*.key
+.claude/
