@@ -90,7 +90,7 @@ Genera `php-deps-1.tar.gz`, un `php-X.Y.Z-el7-opt.tar.gz` por versión y `SHA256
 
 ## Procedencia y mantenimiento (SBOM mínimo)
 
-Registra en un archivo versionado: versión y hash de cada fuente, fecha de compilación, compilador, flags de `configure`, hash de cada paquete. Las fuentes se verifican con `build/sources.sha256`; los hashes salen de la web oficial de cada proyecto, no de un cálculo propio sin contraste. Quien despliega queda como responsable de vigilar las CVE de **PHP y de cada librería de `/opt/deps`**: define una frecuencia (mensual) y quién la ejecuta.
+Registra en un archivo versionado: versión y hash de cada fuente, fecha de compilación, compilador, flags de `configure`, hash de cada paquete. Las fuentes se verifican con `build/sources.sha256`; cada hash viene del proyecto (hash o firma publicados) o, si el proyecto no los publica, de una comparación con distribuciones independientes (ver «Autenticidad de las fuentes»); no se acepta un cálculo propio sin contraste. Quien despliega queda como responsable de vigilar las CVE de **PHP y de cada librería de `/opt/deps`**: define una frecuencia (mensual) y quién la ejecuta.
 
 ## Prueba de laboratorio
 
@@ -120,4 +120,4 @@ Un hash calculado después de descargar solo prueba que hoy recibes el mismo arc
 2. Si no hay firma, descarga el archivo desde dos redes distintas o dos espejos oficiales y compara los hashes calculados. Es una comprobación de consistencia de **menor confianza**: detecta alteraciones de transporte o diferencias entre espejos, pero no prueba el origen.
 3. Registra el resultado y el hash en el SBOM; una vez verificado, puedes agregar la línea a `build/sources.sha256` para tu propia organización (no la subas al repositorio público sin contrastar).
 4. Con `ALLOW_UNPINNED=1` el build **descarga y ejecuta** `configure` y `make` de código sin autenticar: hazlo solo en un laboratorio aislado, sin secretos ni acceso a producción, y de preferencia sin root.
-5. Los scripts dejan `SOURCES-NOT-AUTHENTICATED.txt` en `/opt/deps` mientras haya fuentes sin autenticar, y `install-package.sh` y `make-package.sh` lo avisan. Sin firma verificada (punto 1), usa el paquete en producción solo con una excepción de riesgo aprobada y documentada.
+5. Los scripts dejan `SOURCES-NOT-AUTHENTICATED.txt` en `/opt/deps` mientras haya fuentes sin autenticar, y `install-package.sh` y `make-package.sh` lo avisan. Si alguna fuente solo se verificó por comparación de descargas (punto 2), usa el paquete en producción solo con una excepción de riesgo aprobada y documentada.

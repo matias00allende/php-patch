@@ -1,6 +1,6 @@
 # 08 - Distribuciones y estrategia por sistema
 
-La skill sirve para cualquier sistema Linux con PHP, pero **la estrategia cambia según el sistema**. Primero ejecuta `scripts/detect-env.sh`: detecta familia, versión, gestor de paquetes, servidor web y SAPI, y sugiere A, B o C. Lo de abajo es el criterio detrás de esa sugerencia.
+La skill orienta la decisión en sistemas Linux con PHP, pero **la estrategia cambia según el sistema** y la automatización y las pruebas solo cubren lo que detalla `11-perfiles-y-alcance-probado.md`. Primero ejecuta `scripts/detect-env.sh`: detecta familia, versión, gestor de paquetes, servidor web y SAPI, y sugiere A, B o C. Lo de abajo es el criterio detrás de esa sugerencia.
 
 ## Las tres estrategias
 

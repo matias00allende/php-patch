@@ -64,7 +64,7 @@ El orden de **servidores** también cuenta: parte por el de menor riesgo para en
 
 Credenciales en comentarios, directorios `.git` en el docroot, respaldos `*.bak`/`*_bkp` legibles, bases de datos expuestas en la red, servicios innecesarios, permisos setuid en carpetas web, WordPress sin actualizar. Regístralos en una tabla aparte con servidor, hallazgo y recomendación, **sin reproducir secretos**, y no los corrijas sin autorización.
 
-## Pre-validación pasiva desde fuera
+## Prevalidación pasiva desde fuera
 
 Antes de entrar a un servidor puedes estimar qué versión de PHP anuncia cada sitio con `scripts/remote-version-check.sh <archivo-de-urls>`. Solo lee las cabeceras `Server` y `X-Powered-By` y compara con la versión corregida de cada rama. Úsalo únicamente contra sistemas propios o con autorización escrita.
 

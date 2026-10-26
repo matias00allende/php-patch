@@ -35,7 +35,7 @@ CIS Controls (gestión de vulnerabilidades, configuración segura), NIST CSF (Pr
 
 ## Qué reportar al directivo en una frase
 
-"El riesgo se cierra sitio por sitio con reversión inmediata; X de Y sitios están parchados, Z siguen expuestos con mitigación y fecha de retiro, y el sistema operativo sigue sin soporte hasta que se migre."
+"La exposición se reduce sitio por sitio y cada activación tiene una reversión probada; X de Y sitios están parchados, Z siguen expuestos con mitigación y fecha de retiro, y el sistema operativo sigue sin soporte hasta que se migre."
 
 ## Actualizar las bibliotecas de `/opt/deps`
 

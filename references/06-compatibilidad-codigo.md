@@ -37,7 +37,7 @@ Fuente de verdad: `https://www.php.net/manual/es/migration80.php` y las páginas
 
 ## Cómo decidir la versión de cada sitio
 
-1. Parte de la más reciente soportada que pase el lint y los patrones, dentro del alcance verificado (`assets/alcance-verificado.conf`).
+1. Parte de la versión soportada más reciente, dentro del alcance verificado (`assets/alcance-verificado.conf`). Antes de activarla, ejecuta el lint y revisa los patrones: son indicios y un lint limpio no demuestra compatibilidad.
 2. Si falla con una versión, prueba la anterior (`change-version.sh <slug> <MM>`): la plataforma está hecha para eso.
 3. Si no corre en ninguna 8.x: **no es un problema de la plataforma**, es deuda del sitio. Opciones: actualizar el CMS/framework, reescribir, retirar, o aislar con PHP-FPM antiguo + WAF + fecha de retiro (explícitamente vulnerable).
 4. Anota la decisión y el motivo en la matriz de sitios.

@@ -7,7 +7,7 @@ Primera versión pública.
 ### Qué incluye
 - Detección del entorno y elección de estrategia: A (actualizar paquetes), B (PHP compilado al lado con PHP-FPM, un pool por sitio) o C (mitigar).
 - Inventario de solo lectura, línea base de todos los vhosts, sitio sombra, activación y rollback por sitio, cambio de versión por sitio y desinstalación.
-- Pre-validación pasiva desde fuera (`remote-version-check.sh`), con código propio.
+- Prevalidación pasiva desde fuera (`remote-version-check.sh`), con código propio.
 - Respaldo y restauración de la configuración (`backup.sh`): obligatorio antes de cualquier cambio; restaurar simula por defecto y guarda antes el estado actual.
 - Confirmación explícita para operaciones masivas (`--all`).
 - Puertas de seguridad: lo no probado y las fuentes sin autenticar se niegan por defecto; solo una persona puede aceptar la excepción.
